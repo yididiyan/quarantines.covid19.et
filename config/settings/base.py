@@ -79,7 +79,7 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     "covid19_quarantine.users.apps.UsersConfig",
-    "quarantine.apps.QuarantineConfig",
+    "covid19_quarantine.quarantine.apps.QuarantineConfig",
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps

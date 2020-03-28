@@ -1,9 +1,15 @@
 from django.db import models
+from django.urls import reverse
+from django.contrib.auth.models import AbstractUser
 from django.contrib.gis.db import models as gis_models
+from django.utils.translation import ugettext_lazy as _
+
+
 from covid19_quarantine.users.models import User
 
+
 class QuarantineCenter(models.Model):
-    name = models.CharField("Name of the center", blank=False, max_length=255)
+    name = models.CharField(_("Name of the center"), blank=False, max_length=255)
     location = gis_models.PointField()
     address = models.CharField(max_length=255)
     admin = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
