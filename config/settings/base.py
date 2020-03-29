@@ -75,6 +75,7 @@ THIRD_PARTY_APPS = [
     # "allauth.socialaccount",
     "rest_framework",
     "rest_framework.authtoken",
+    'invitations',
 ]
 
 LOCAL_APPS = [
@@ -84,6 +85,9 @@ LOCAL_APPS = [
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
+
+
+ACCOUNT_ADAPTER = 'invitations.models.InvitationsAdapter'
 
 # MIGRATIONS
 # ------------------------------------------------------------------------------
@@ -226,7 +230,7 @@ EMAIL_TIMEOUT = 5
 # ADMIN
 # ------------------------------------------------------------------------------
 # Django Admin URL.
-ADMIN_URL = "admin/"
+ADMIN_URL = ""
 # https://docs.djangoproject.com/en/dev/ref/settings/#admins
 ADMINS = [("""Yididiya Yilma""", "yididiya.yilma@gmail.com")]
 # https://docs.djangoproject.com/en/dev/ref/settings/#managers
@@ -283,3 +287,8 @@ REST_FRAMEWORK = {
 }
 # Your stuff...
 # ------------------------------------------------------------------------------
+
+
+
+# Invitations 
+INVITATIONS_INVITATION_MODEL = 'invitations.Invitation'

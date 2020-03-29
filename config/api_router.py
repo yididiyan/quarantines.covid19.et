@@ -10,7 +10,7 @@ else:
     router = SimpleRouter()
 
 router.register("users", UserViewSet)
-router.register("quarantine", QuarantineCenterViewSet)
+router.register("quarantine-centers", QuarantineCenterViewSet)
 
 
 app_name = "api"

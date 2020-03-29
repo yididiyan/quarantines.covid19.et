@@ -11,7 +11,5 @@ class QuarantineCenterViewSet(RetrieveModelMixin, ListModelMixin, UpdateModelMix
     serializer_class = QuarantineCenterSerializer
     queryset = QuarantineCenter.objects.all()
 
-    def get_queryset(self, *args, **kwargs):
-        return self.queryset
-
+    lookup_field = 'pk'
 
