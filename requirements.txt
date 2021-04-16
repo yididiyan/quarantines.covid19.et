@@ -23,7 +23,7 @@ Django==3.0.7
 django-allauth==0.41.0
 django-coverage-plugin==1.8.0
 django-crispy-forms==1.9.0
-django-debug-toolbar==2.2
+django-debug-toolbar==2.2.1
 django-environ==0.4.5
 django-extensions==2.2.9
 django-invitations==1.9.3
